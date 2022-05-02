@@ -1,5 +1,5 @@
 # terminalize
-<img src="https://raw.githubusercontent.com/pabletos/terminalize/main/img/terminalize.svg" alt="Terminalize logo" width="250">
+<img src="https://raw.githubusercontent.com/pabletos/terminalize/main/img/terminalize.svg" alt="Terminalize logo" width="250" align="center">
 
 Terminalize is **a simple and lightweight CSS3 micro-framework** for doing terminal-like interfaces.
 
