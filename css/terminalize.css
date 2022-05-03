@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Terminal';
-    src: url('css/terminal.ttf');
+    src: url('../fonts/terminal.ttf');
 }
 
 .terminalize {
@@ -177,6 +177,8 @@
   line-height: 1.30769231;
   position: relative;
   overflow: hidden;
+  max-width: 100%;
+  white-space: break-spaces;
 }
 
 .terminalize pre.code div.title{
@@ -318,6 +320,8 @@
   align-items: center;
   padding: 0 1rem;
   flex: 1;
+  position: relative;
+  max-width: 100%;
 }
 
 .terminalize .type {
@@ -354,6 +358,10 @@
 }
 
 .terminalize .a-c {
+  align-items: center !important;
+}
+
+.terminalize .a-auto {
   align-items: center !important;
 }
 
@@ -652,7 +660,7 @@
   animation: scanlines 1s steps(60) infinite;
 }
 
-/* ANIMADO DE SCANLINE */
+/* SCANLINE ANIMATION */
 @-webkit-keyframes scanline {
   0% {
 	-webkit-transform: translate3d(0, 200000%, 0);
@@ -688,18 +696,48 @@
 
 /* RESPONSIVE */
 
-/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
+  .terminalize blockquote {
+    margin: 0;
+  }
+  .terminalize .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    flex: 1;
+    position: relative;
+  }
+  .terminalize pre.code {
+    padding: 0 0 0 0.5rem;
+    max-width: 100%;
+    margin: 0;
+  }
+
   .terminalize .pannel {
-    margin: 1rem 0.4rem;
+    margin: 1rem 0rem;
   }
   .terminalize .pannel .pannel-body {
     padding: 0.4rem;
   }
+
+  .terminalize .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .terminalize table {
+    margin: 1rem 0rem;
+  }
+
+  .terminalize .a-auto {
+    align-items: flex-start !important;
+  }
+
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
-
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
+@media only screen and (max-width: 768px) {
+  
+}
