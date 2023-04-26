@@ -518,8 +518,12 @@
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
-	border: 1px var(--border-style) var(--color-primary);
-	
+	border: 3px var(--border-style) var(--color-secondary);
+	box-shadow: 
+	1px -1px 0px var(--color-primary),
+	-1px 1px 0px var(--color-primary),
+	-1px -1px 0px var(--color-primary),
+	1px 1px 0px var(--color-primary);
 }
 
 .terminalize ::-webkit-progress-bar {
