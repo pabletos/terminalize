@@ -1,73 +1,73 @@
 @font-face {
-    font-family: 'Terminal';
-    src: url('../fonts/terminal.ttf');
+		font-family: 'Terminal';
+		src: url('../fonts/terminal.ttf');
 }
 
 .terminalize {
-  --color-primary: #00c800;
-  --color-secondary: #000000;
-  --color-tertiary: #007800;
-  --color-quaternary: #001900;
-  --border-style: solid;
-  --border-style-secondary: dashed;
-  --font: 'Terminal', monospace;
-  --post-width: 38rem;
-  --filter: sepia(100%) hue-rotate(90deg);
-  
-  font-family: var(--font);
-  font-size: 1rem;
-  color: var(--color-primary);
-  text-shadow: var(--color-primary) 0 -0.1rem 2rem;
-  box-sizing: border-box;
+	--color-primary: #00c800;
+	--color-secondary: #000000;
+	--color-tertiary: #007800;
+	--color-quaternary: #001900;
+	--border-style: solid;
+	--border-style-secondary: dashed;
+	--font: 'Terminal', monospace;
+	--post-width: 38rem;
+	--filter: sepia(100%) hue-rotate(90deg);
+	
+	font-family: var(--font);
+	font-size: 1rem;
+	color: var(--color-primary);
+	text-shadow: var(--color-primary) 0 -0.1rem 2rem;
+	box-sizing: border-box;
 }
 
 .terminalize .screen{
-  background-color: var(--color-secondary);
+	background-color: var(--color-secondary);
 }
 
 .terminalize *, .terminalize *:before, .terminalize *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 .terminalize img {
-  -webkit-filter: var(--filter);
-  filter:  var(--filter);
+	-webkit-filter: var(--filter);
+	filter:  var(--filter);
 }
 
 .terminalize p {
-  text-align: justify;
+	text-align: justify;
 }
 
 .t-l {
-  text-align: left !important;
+	text-align: left !important;
 }
 
 .t-r {
-  text-align: right !important;
+	text-align: right !important;
 }
 
 .t-c {
-  text-align: center !important;
+	text-align: center !important;
 }
 
 .terminalize.theme-blue {
-  --color-primary: #04d9ff;
-  --color-tertiary: #106877;
-  --color-quaternary: #050611;
-  --filter: sepia(100%) hue-rotate(180deg);
+	--color-primary: #04d9ff;
+	--color-tertiary: #106877;
+	--color-quaternary: #050611;
+	--filter: sepia(100%) hue-rotate(180deg);
 }
 
 .terminalize.theme-orange {
-  --color-primary: #f0bf25;
-  --color-secondary: #2c2013;
-  --color-tertiary: #8e7117;
-  --color-quaternary: #110c05;
-  --filter: sepia(100%);
+	--color-primary: #f0bf25;
+	--color-secondary: #2c2013;
+	--color-tertiary: #8e7117;
+	--color-quaternary: #110c05;
+	--filter: sepia(100%);
 }
 
 .terminalize input, .terminalize textarea, .terminalize button, .terminalize a{
-    color: var(--color-primary);
-  	text-shadow: var(--color-primary) 0 -0.1rem 2rem;
+		color: var(--color-primary);
+		text-shadow: var(--color-primary) 0 -0.1rem 2rem;
 }
 
 .terminalize a:hover{
@@ -81,80 +81,80 @@
 }
 
 .terminalize ::-moz-selection { 
-  color: var(--color-secondary);
-  background: var(--color-primary);
+	color: var(--color-secondary);
+	background: var(--color-primary);
 }
 
 .terminalize ::selection {
-  color: var(--color-secondary);
-  background: var(--color-primary);
+	color: var(--color-secondary);
+	background: var(--color-primary);
 }
 
 .terminalize [contenteditable]:focus {
-  outline: 0px solid transparent;
+	outline: 0px solid transparent;
 }
 
 .terminalize table {
-  margin: 1rem;
-  border-collapse: collapse;
+	margin: 1rem;
+	border-collapse: collapse;
 }
 
 .terminalize table.bordered {
-  border: 1px var(--border-style) var(--color-primary);
+	border: 1px var(--border-style) var(--color-primary);
 }
 
 .terminalize table thead, .terminalize table tfoot{
-  background: var(--color-primary);
-  color: var(--color-secondary);
-  height: 2rem;
-  border-top: 1px var(--border-style) var(--color-primary);
-  border-bottom: 1px var(--border-style) var(--color-primary);
+	background: var(--color-primary);
+	color: var(--color-secondary);
+	height: 2rem;
+	border-top: 1px var(--border-style) var(--color-primary);
+	border-bottom: 1px var(--border-style) var(--color-primary);
 }
 
 .terminalize table.simple thead, .terminalize table.simple tfoot{
-  background: var(--color-secondary);
-  color: var(--color-primary);
-  height: 2rem;
+	background: var(--color-secondary);
+	color: var(--color-primary);
+	height: 2rem;
 }
 
 .terminalize table.simple thead {
-  border-top: 1px var(--border-style) var(--color-primary);
-  border-bottom: 1px var(--border-style) var(--color-primary);
+	border-top: 1px var(--border-style) var(--color-primary);
+	border-bottom: 1px var(--border-style) var(--color-primary);
 }
 
 .terminalize table.simple tfoot {
-  border-top: 1px var(--border-style) var(--color-primary);
-  border-bottom: 1px var(--border-style) var(--color-primary);
+	border-top: 1px var(--border-style) var(--color-primary);
+	border-bottom: 1px var(--border-style) var(--color-primary);
 }
 
 .terminalize table tr th, .terminalize table tr td {
-  text-align: left;
-  padding: 0.5rem 1rem;
-  border: none;
+	text-align: left;
+	padding: 0.5rem 1rem;
+	border: none;
 }
 
 .terminalize table.highlight tbody tr:hover {
-  color: var(--color-secondary);
-  background: var(--color-primary);
-  cursor: pointer;
-  font-weight: bold;
+	color: var(--color-secondary);
+	background: var(--color-primary);
+	cursor: pointer;
+	font-weight: bold;
 }
 .terminalize table tbody tr.highlighted:hover {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-  font-weight: normal;
+	color: var(--color-primary);
+	background-color: var(--color-secondary);
+	font-weight: normal;
 }
 
 .terminalize table tbody tr.highlighted {
-  color: var(--color-secondary);
-  background: var(--color-primary);
-  font-weight: bold;
+	color: var(--color-secondary);
+	background: var(--color-primary);
+	font-weight: bold;
 }
 
 .terminalize .form-group {
-  padding: 1rem;
-  border: 1px var(--border-style) var(--color-primary);
-  margin-top: -1px;
+	padding: 1rem;
+	border: 1px var(--border-style) var(--color-primary);
+	margin-top: -1px;
 }
 
 .terminalize blockquote {
@@ -168,40 +168,40 @@
 }
 
 .terminalize pre.code {
-  background-color: var(--color-quaternary);
-  color: var(--color-primary);
-  max-width: var(--post-width);
+	background-color: var(--color-quaternary);
+	color: var(--color-primary);
+	max-width: var(--post-width);
 	margin: auto;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  line-height: 1.30769231;
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  white-space: break-spaces;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	line-height: 1.30769231;
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+	white-space: break-spaces;
 }
 
 .terminalize pre.code div.title{
-  position: absolute;
-  top: 0;
-  left: 0;
-  white-space: normal;
-  border-radius: 5px 0 5px 0;
-  padding: 0.3rem 1rem;
-  background-color: var(--color-primary);
-  color: var(--color-quaternary);
-  font-family: var(--font);
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: normal;
+	border-radius: 5px 0 5px 0;
+	padding: 0.3rem 1rem;
+	background-color: var(--color-primary);
+	color: var(--color-quaternary);
+	font-family: var(--font);
 }
 
 .terminalize pre.code code {
-  font-family: var(--font);
-  overflow: auto;
+	font-family: var(--font);
+	overflow: auto;
 }
 
 .terminalize pre.code div.title.right {
-  left: unset;
-  right: 0;
-  border-radius: 0 5px 0 5px;
+	left: unset;
+	right: 0;
+	border-radius: 0 5px 0 5px;
 }
 
 .terminalize .post {
@@ -211,533 +211,532 @@
 }
 
 .terminalize span.cursor {
-  height: 1em;
-  border-left: .15em solid var(--color-primary);
+	height: 1em;
+	border-left: .15em solid var(--color-primary);
 }
 
 .terminalize span.cursor.blink {
-  animation: blink-caret .75s step-end infinite;
+	animation: blink-caret .75s step-end infinite;
 }
 
 .terminalize .pannel {
-  position: relative;
-  overflow: hidden;
-  flex: 1;
-  max-height: calc(100% - 2rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 1rem 0.5rem;
-  border: 1px var(--border-style) var(--color-primary);
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	flex: 1;
+	max-width: 1200px;
+	max-height: calc(100% - 2rem);
+	margin: 1rem auto;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 1px var(--border-style) var(--color-primary);
+	
 }
 
 .terminalize .pannel.fluid {
-  max-height: none;
+	max-height: none;
 }
 
 .terminalize .pannel .pannel-header {
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: left;
-  padding: 0;
-  border-bottom: 1px var(--border-style) var(--color-primary);
-  min-height: 2rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	text-align: left;
+	padding: 0;
+	border-bottom: 1px var(--border-style) var(--color-primary);
+	min-height: 2rem;
 }
 
 .terminalize .pannel .pannel-header > * {
-  padding: 0.5rem 1rem;
+	padding: 0.5rem 1rem;
 }
 
 .terminalize .pannel .pannel-header .controls {
-  padding: 0;
-  flex: 0;
-  display: flex;
-  flex-direction: row;
-  border-left: 1px var(--border-style) var(--color-primary);
+	padding: 0;
+	flex: 0;
+	display: flex;
+	flex-direction: row;
+	border-left: 1px var(--border-style) var(--color-primary);
 }
 
 .terminalize .pannel .pannel-header .controls .control {
-  padding: 0.5rem;
-  padding: 0.5rem;
-  min-width: 1.5rem;
-  text-align: center;
+	padding: 0.5rem;
+	padding: 0.5rem;
+	min-width: 1.5rem;
+	text-align: center;
 }
 
 .terminalize .pannel .pannel-header .controls .control:hover {
-  cursor: pointer;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+	cursor: pointer;
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
 }
 
 .terminalize .pannel .pannel-body {
-  overflow-y: auto;
-  padding: 1rem;
+	overflow-y: auto;
+	padding: 1rem;
 }
 
 .terminalize .pannel .pannel-footer {
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: right;
-  border-top: 1px var(--border-style) var(--color-primary);
-  min-height: 2rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	text-align: right;
+	border-top: 1px var(--border-style) var(--color-primary);
+	min-height: 2rem;
 }
 
 .terminalize .pannel .pannel-footer > * {
-  padding: 0.5rem 1rem;
+	padding: 0.5rem 1rem;
 }
 
 .terminalize .rounded {
-  border-radius: 8px;
+	border-radius: 8px;
 }
 
 .terminalize .screen {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
 .terminalize .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
 }
 
 .terminalize .col {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 1rem;
-  flex: 1;
-  position: relative;
-  max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1rem;
+	flex: 1;
+	position: relative;
+	max-width: 100%;
 }
 
 .terminalize .type {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: enlarge 3.5s steps(40, end);
+	overflow: hidden;
+	white-space: nowrap;
+	animation: enlarge 3.5s steps(40, end);
 }
 
 .terminalize {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) var(--color-secondary);
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-primary) var(--color-secondary);
 }
 
 .terminalize ::-webkit-scrollbar {
-  width: 0.8rem;               /* width of the entire scrollbar */
+	width: 0.8rem;               /* width of the entire scrollbar */
 }
 
 .terminalize ::-webkit-scrollbar-track {
-  background: var(--color-secondary);        /* color of the tracking area */
+	background: var(--color-secondary);        /* color of the tracking area */
 }
 
 .terminalize ::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);    /* color of the scroll thumb */
-  border-radius: 8px;       /* roundness of the scroll thumb */
-  border: 2px var(--border-style) var(--color-tertiary);  /* creates padding around scroll thumb */
+	background-color: var(--color-primary);    /* color of the scroll thumb */
+	border-radius: 8px;       /* roundness of the scroll thumb */
+	border: 2px var(--border-style) var(--color-tertiary);  /* creates padding around scroll thumb */
 }
 
 .terminalize .a-s {
-  align-items: flex-start !important;
+	align-items: flex-start !important;
 }
 
 .terminalize .a-e {
-  align-items: flex-end !important;
+	align-items: flex-end !important;
 }
 
 .terminalize .a-c {
-  align-items: center !important;
+	align-items: center !important;
 }
 
 .terminalize .a-auto {
-  align-items: center !important;
+	align-items: center !important;
 }
 
 .terminalize .f-0 {
-  flex: 0 !important;
+	flex: 0 !important;
 }
 
 .terminalize .j-c {
-  justify-content: center;
+	justify-content: center;
 }
 
 .terminalize .j-l {
-  justify-content: left;
+	justify-content: left;
 }
 
 .terminalize .j-r {
-  justify-content: right;
+	justify-content: right;
 }
 
 .terminalize .j-c {
-  justify-content: space-around;
+	justify-content: space-around;
 }
 
 .terminalize .j-b {
-  justify-content: space-between;
+	justify-content: space-between;
 }
 
 .terminalize .w-100 {
-  width: 100%;
+	width: 100%;
 }
 
 
 /* COMPONENTS */
 
 .terminalize .checkbox {
-  display: block;
-  position: relative;
-  padding-left: 1.8rem;
-  margin: 1rem 0;
-  cursor: pointer;
-  font-size: 1rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	display: block;
+	position: relative;
+	padding-left: 1.8rem;
+	margin: 1rem 0;
+	cursor: pointer;
+	font-size: 1rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .terminalize .checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
 }
 
 .terminalize .checkmark {
-  border: 1px var(--border-style) var(--color-primary);
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: transparent;
-  box-sizing: border-box !important;
+	border: 1px var(--border-style) var(--color-primary);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 16px;
+	width: 16px;
+	background-color: transparent;
+	box-sizing: border-box !important;
 }
 
 .terminalize .checkbox:hover input ~ .checkmark {
-  background-color: var(--color-secondary);
+	background-color: var(--color-secondary);
 }
 
 .terminalize .checkbox .checkmark > span {
-  background-color: transparent;
-  position: absolute;
-  height: 10px;
-  width: 10px;
-  left: 2px;
-  top: 2px;
+	background-color: transparent;
+	position: absolute;
+	height: 10px;
+	width: 10px;
+	left: 2px;
+	top: 2px;
 }
 
 .terminalize .checkbox input:checked ~ .checkmark > span{
-  background-color: var(--color-primary);
+	background-color: var(--color-primary);
 }
 
 .terminalize .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+	content: "";
+	position: absolute;
+	display: none;
 }
 
 .terminalize .checkbox input:checked ~ .checkmark:after {
-  display: block;
+	display: block;
 }
 
 .terminalize input[type=text], .terminalize input[type=number] {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .terminalize input[type=text], .terminalize input[type=number] {
-  display: block;
-  position: relative;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  outline: 1px var(--border-style) var(--color-primary);
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin:0;
+	display: block;
+	position: relative;
+	margin: 0.5rem 0;
+	font-size: 1rem;
+	outline: 1px var(--border-style) var(--color-primary);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin:0;
 	border:0;
 	padding: 1rem;
 	display:inline-block;
 	white-space:normal;
 	background:none;
 	line-height:1;
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-  font-family: var(--font);
+	color: var(--color-primary);
+	background-color: var(--color-secondary);
+	font-family: var(--font);
 }
 
 .terminalize textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  min-height: 10rem;
-  min-width: 10rem;
-  width: 100%;
-  appearance: none;
-  padding: 1rem;
-  font-size: 1rem;
-  border: 1px var(--border-style) var(--color-primary);
-  background-color: var(--color-secondary);
-  font-family: var(--font);
-  color: var(--color-primary);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	min-height: 10rem;
+	min-width: 10rem;
+	width: 100%;
+	appearance: none;
+	padding: 1rem;
+	font-size: 1rem;
+	border: 1px var(--border-style) var(--color-primary);
+	background-color: var(--color-secondary);
+	font-family: var(--font);
+	color: var(--color-primary);
 }
 
 .terminalize textarea:focus-visible {
-  outline: none;
+	outline: none;
 }
 
 .terminalize .inverse {
-  background-color: var(--color-primary) !important;
-  color: var(--color-secondary) !important;
-  font-weight: bold;
+	background-color: var(--color-primary) !important;
+	color: var(--color-secondary) !important;
+	font-weight: bold;
 }
 
 .terminalize .b-alt {
-  border-style: var(--border-style-secondary) !important;
+	border-style: var(--border-style-secondary) !important;
 }
 
 .terminalize progress {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  border: 1px var(--border-style) var(--color-primary);
-  
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px var(--border-style) var(--color-primary);
+	
 }
 
 .terminalize ::-webkit-progress-bar {
-  background-color: var(--color-secondary);
+	background-color: var(--color-secondary);
 }
 
 .terminalize ::-moz-progress-bar {
-  background-color: var(--color-secondary);
+	background-color: var(--color-secondary);
 }
 
 .terminalize ::-webkit-progress-value {
-  background-color: var(--color-primary);
+	background-color: var(--color-primary);
 }
 
 .terminalize ::-moz-progress-value {
-  background-color: var(--color-primary);
+	background-color: var(--color-primary);
 }
 
 .terminalize .btn {
-  display: inline-block;
-  border: 1px var(--border-style) var(--color-primary);
-  padding: 0.8rem 1rem;
-  min-width: 8rem;
-  text-align: center;
+	display: inline-block;
+	border: 1px var(--border-style) var(--color-primary);
+	padding: 0.8rem 1rem;
+	min-width: 8rem;
+	text-align: center;
 }
 
 .terminalize .btn.active {
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
-  font-weight: bold;
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
+	font-weight: bold;
 }
 
 .terminalize .btn:focus, .terminalize .btn:hover, .terminalize .btn-primary:focus, .terminalize .btn:active, .terminalize .btn-primary:active {
 	background-color: var(--color-primary);
-  color: var(--color-secondary);
-  outline: none;
-  cursor: pointer;
-  user-select: none;
-  font-weight: bold;
+	color: var(--color-secondary);
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+	font-weight: bold;
 }
 
 .terminalize .btn.active:focus, .terminalize .btn.active:hover, .terminalize .btn.active-primary:focus, .terminalize .btn.active:active, .terminalize .btn.active:active {
-  background-color: var(--color-secondary) !important;
-  color: var(--color-primary) !important;
-  font-weight: normal;
+	background-color: var(--color-secondary) !important;
+	color: var(--color-primary) !important;
+	font-weight: normal;
 }
 
 .terminalize .select {
-  border:1px var(--border-style) var(--color-primary);
-  height:30px;
-  overflow: hidden;
-  max-width: 15rem;
-  position:relative;
+	border:1px var(--border-style) var(--color-primary);
+	height:30px;
+	overflow: hidden;
+	max-width: 15rem;
+	position:relative;
 }
 
 .terminalize .select.no-border {
-  border: 0;
+	border: 0;
 }
 
 .terminalize .select::after{
-  content:"\025be";
+	content:"\025be";
 	font-size: 2rem;
 	color: var(--color-secondary);
-  display:table-cell;
-  text-align:center;
-  width:30px;
-  height:36px;
-  background-color:var(--color-primary);
-  position:absolute;
-  top:-6px;
-  right:0px;	
-  pointer-events: none;
+	display:table-cell;
+	text-align:center;
+	width:30px;
+	height:36px;
+	background-color:var(--color-primary);
+	position:absolute;
+	top:-6px;
+	right:0px;	
+	pointer-events: none;
 }
 
 .terminalize select {
-  width: 100%;
+	width: 100%;
 	text-shadow: var(--color-primary) 0 -0.1rem 2rem;
 	font-size: 1rem;
-  background: transparent;
+	background: transparent;
 	color: var(--color-primary);
-  font-family: 'Terminal';
-  border: none;
-  font-size: 14px;
-  height: 30px;
-  padding: 5px;
-  padding-right: 2rem;
+	font-family: 'Terminal';
+	border: none;
+	font-size: 14px;
+	height: 30px;
+	padding: 5px;
+	padding-right: 2rem;
 }
 
 .terminalize select:focus{ outline: none;}
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: var(--color-primary); }
+	from, to { border-color: transparent }
+	50% { border-color: var(--color-primary); }
 }
 
 @keyframes enlarge {
-  from { width: 0 }
-  to { width: 100% }
+	from { width: 0 }
+	to { width: 100% }
 }
 
 /* SCANLINES */
 .scanlines {
-  position: relative;
-  overflow: hidden;
+	position: relative;
+	overflow: hidden;
 }
 .scanlines:before,
 .scanlines:after {
-  display: block;
-  pointer-events: none;
-  content: "";
-  position: absolute;
+	display: block;
+	pointer-events: none;
+	content: "";
+	position: absolute;
 }
 .scanlines:before {
-  width: 100%;
-  height: 5px;
-  z-index: 2147483649;
-  background: rgba(0, 255, 0, 0.3);
-  opacity: 0.75;
-  -webkit-animation: scanline 6s linear infinite;
-  animation: scanline 6s linear infinite;
+	width: 100%;
+	height: 5px;
+	z-index: 2147483649;
+	background: rgba(0, 255, 0, 0.3);
+	opacity: 0.75;
+	-webkit-animation: scanline 6s linear infinite;
+	animation: scanline 6s linear infinite;
 }
 .scanlines:after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2147483648;
-  background: -webkit-linear-gradient(
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2147483648;
+	background: -webkit-linear-gradient(
 	top,
 	transparent 50%,
 	rgba(0, 80, 0, 0.3) 51%
-  );
-  background: linear-gradient(
+	);
+	background: linear-gradient(
 	to bottom,
 	transparent 50%,
 	rgba(0, 80, 0, 0.3) 51%
-  );
-  background-size: 100% 0.5vh;
-  -webkit-animation: scanlines 1s steps(60) infinite;
-  animation: scanlines 1s steps(60) infinite;
+	);
+	background-size: 100% 0.5vh;
+	-webkit-animation: scanlines 1s steps(60) infinite;
+	animation: scanlines 1s steps(60) infinite;
 }
 
 /* SCANLINE ANIMATION */
 @-webkit-keyframes scanline {
-  0% {
+	0% {
 	-webkit-transform: translate3d(0, 200000%, 0);
 	transform: translate3d(0, 200000%, 0);
-  }
+	}
 }
 @keyframes scanline {
-  0% {
+	0% {
 	-webkit-transform: translate3d(0, 200000%, 0);
 	transform: translate3d(0, 200000%, 0);
-  }
+	}
 }
 @-webkit-keyframes scanlines {
-  0% {
+	0% {
 	background-position: 0 50%;
-  }
+	}
 }
 @keyframes scanlines {
-  0% {
+	0% {
 	background-position: 0 50%;
-  }
+	}
 }
 
 .blink {
-  animation: blink 1s infinite;
+	animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  to {
+	to {
 	opacity: 0;
-  }
+	}
 }
 
 /* RESPONSIVE */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-  .terminalize blockquote {
-    margin: 0;
-  }
-  .terminalize .col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    flex: 1;
-    position: relative;
-  }
-  .terminalize pre.code {
-    padding: 0 0 0 0.5rem;
-    max-width: 100%;
-    margin: 0;
-  }
+	.terminalize blockquote {
+		margin: 0;
+	}
+	.terminalize .col {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0;
+		flex: 1;
+		position: relative;
+	}
+	.terminalize pre.code {
+		padding: 0 0 0 0.5rem;
+		max-width: 100%;
+		margin: 0;
+	}
 
-  .terminalize .pannel {
-    margin: 1rem 0rem;
-  }
-  .terminalize .pannel .pannel-body {
-    padding: 0.4rem;
-  }
+	.terminalize .pannel .pannel-body {
+		padding: 0.4rem;
+	}
 
-  .terminalize .row {
-    flex-direction: column;
-    align-items: center;
-  }
+	.terminalize .row {
+		flex-direction: column;
+		align-items: center;
+	}
 
-  .terminalize table {
-    margin: 1rem 0rem;
-  }
+	.terminalize table {
+		margin: 1rem 0rem;
+	}
 
-  .terminalize .a-auto {
-    align-items: flex-start !important;
-  }
+	.terminalize .a-auto {
+		align-items: flex-start !important;
+	}
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-  
+	
 }

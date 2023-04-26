@@ -1,0 +1,482 @@
+<html lang="en">
+	<head>
+		<title>Terminalize: A CSS terminal micro-framework</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<meta
+			name="description"
+			content="Terminalize is a simple and lightweight CSS3 micro-framework for doing terminal-like interfaces"
+		/>
+		<meta property="og:title" content="Terminalize: A CSS terminal micro-framework" />
+		<meta property="og:description" content="Terminalize is a simple and lightweight CSS3 micro-framework for doing terminal-like interfaces" />
+		<meta property="og:image" content="https://terminalize.ml/terminalize.png" />
+		<meta property="og:url" content="http://terminalize.ml" />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:creator" content="@Pabletos"/>
+		<meta name="twitter:image" content="https://terminalize.ml/terminalize.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="favicon.svg" />	
+		<link
+			rel="stylesheet"
+			href="css/terminalize.min.css"
+			type="text/css"
+			media="all"
+		/>
+		<link rel="canonical" href="http://terminalize.ml" />
+		<style>
+			@media only screen and (max-width: 600px) {
+				#title {
+					display: none;
+				}
+				.btn {
+					margin: 0.5rem 0;
+				}
+			}
+		</style>
+		<script type="text/javascript">		
+			window.addEventListener('input', function (event) {
+				const terminalize = document.getElementsByClassName('terminalize')[0];
+				if (event.target.id === 'select-theme') {
+					if (event.target.value !== 'null') {
+						terminalize.className = 'terminalize ' + event.target.value;
+					} else {
+						terminalize.className = 'terminalize';
+					}
+				}
+			});
+			window.addEventListener('click', function (event) {
+				if (event.target.id === 'maximize') {
+					if (document.fullscreenElement) {
+						document.exitFullscreen();
+					} else {
+						document.querySelector('body').requestFullscreen();
+					}
+				}
+			})
+		</script>
+	</head>
+
+	<body
+		class="terminalize"
+		style="padding: 0rem; margin: 0rem; background: black"
+	>
+		<div class="screen scanlines">
+			<div class="pannel rounded">
+				<div class="pannel-header">
+					<div class="col a-s">
+						<div class="row j-b a-auto w-100">
+							<div id="title""" class="type">This is Terminalize<span class="cursor blink"></span></div>
+							<div style="margin-right: -1rem;" class="select no-border">
+								<select id="select-theme" name="theme">
+									<option selected value="null">Original theme</option>
+									<option value="theme-blue">Blue theme</option>
+									<option value="theme-orange">Orange theme</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col controls">
+						<div class="control">-</div>
+						<div id="maximize" class="control">☐</div>
+						<div class="control">X</div>
+					</div>
+				</div>
+				<div class="pannel-body">
+					<div class="post">
+						<a 
+							class="btn" 
+							style="margin: auto; display: block; text-decoration: none; display: flex; justify-content: center; align-items: center;"
+							href="https://github.com/pabletos/terminalize/releases"
+							target="_blank"
+						>
+							<img 
+								style="width: 2rem"
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png?20180806170715">
+							<span style="flex: 1;">Download from Github</span>
+						</a>
+					</div>
+					<div class="pannel fluid">
+						<div class="pannel-header inverse">
+							<div class="col a-s">What is it?</div>
+						</div>
+						<div class="pannel-body">
+							<div class="post">
+								<p>
+									Terminalize is a simple CSS3 micro-framework for doing
+									terminal-like interfaces for the web or hybrid app
+									projects.
+								</p>
+								<h3>Motivation</h3>
+								<blockquote>
+									when you don't create things, you become defined by your tastes rather than ability.
+									your tastes only narrow & exclude people. 
+									so create.
+									
+									- Why The Lucky Stiff
+								</blockquote>
+								<p>
+									Terminalize was, in its humble beginnings, an old personal
+									website I did based on a old codepen.
+								</p>
+								<p>
+									The main purpose of that website, at that time, was only to
+									show my former CSS and web development skills. So I also
+									created a blog with curious posts about coding and projects.
+								</p>
+								<p>
+									But as I soon discovered, the large majority
+									of devices screens at the time showed the website too blurry
+									and out of focus. So I had to discard that design and create a
+									new website from scratch.
+								</p>
+								<p>
+									Some time ago I re-discovered this project buried in my files
+									and decided to transform it into some kind of micro-CSS
+									framework for quick terminal style websites.
+								</p>
+								<p>- Pablo<span class="cursor blink"></span></p>
+							</div>
+						</div>
+					</div>
+					<div class="pannel">
+						<div class="pannel-header inverse">
+							<div class="col a-s">Customize</div>
+						</div>
+						<div class="pannel-body">
+							<div class="row">
+								<div class="col">
+									<p>
+										Terminalize uses few and easy to create 
+										themes with only five base constants.
+									</p>
+									<p>
+										You can also easily change font, border styles, and maximum
+										width for your posts.
+									</p>
+								</div>
+								<div class="col">
+								<pre class="code">
+								<div class="title">Orange theme (as seen on top)</div>
+								<code>
+.terminalize.theme-orange {
+  --color-primary: #f0bf25;
+  --color-secondary: #2c2013;
+  --color-tertiary: #8e7117;
+  --color-quaternary: #110c05;
+  --filter: sepia(100%);
+}
+								</code>
+								</pre>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="pannel">
+						<div class="pannel-header inverse">
+							<div class="col a-s">Code blocks</div>
+						</div>
+						<div class="pannel-body">
+							<pre class="code">
+							<div class="title" contenteditable="true">This text is editable! Try me!</div>
+                <code contenteditable="true">
+function one(){
+  $.log("File");
+}
+
+function two(){
+  $.log("File");
+}
+
+function one(){
+  $.log("File");
+}
+
+function two(){
+  $.log("File");
+}
+                </code>
+              </pre>
+						</div>
+					</div>
+					<div class="pannel fluid">
+						<div class="pannel-header inverse">
+							<div class="col a-s">Display your data</div>
+						</div>
+						<div class="pannel-body">
+							<div class="row a-auto">
+								<table>
+									<thead>
+										<tr>
+											<th>Country</th>
+											<th>Population</th>
+											<th>Avaaz</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Andorra</td>
+											<td>85,000</td>
+											<td>3,316</td>
+										</tr>
+										<tr>
+											<td>Luxembourg</td>
+											<td>498,000</td>
+											<td>14,228</td>
+										</tr>
+										<tr>
+											<td>France</td>
+											<td>64,768,000</td>
+											<td>1,827,517</td>
+										</tr>
+										<tr>
+											<td>Belgium</td>
+											<td>10,423,000</td>
+											<td>292,530</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3"></td>
+										</tr>
+									</tfoot>
+								</table>
+								<pre class="code">
+									<div class="title">Default table</div>
+<code>
+&lt;table>
+  &lt;thead>
+    &lt;tr>
+      &lt;th>Country&lt;/th>
+      &lt;th>Population&lt;/th>
+      &lt;th>Avaaz&lt;/th>
+    &lt;/tr>
+  &lt;/thead>
+  &lt;tbody>
+    &lt;!-- tr and td tags-->
+  &lt;/tbody>
+  &lt;tfoot>
+    &lt;tr>
+      &lt;td colspan="3">&lt;/td>
+    &lt;/tr>
+  &lt;/tfoot>
+&lt;/table>
+</code>
+								</pre>
+							</div>
+							<div class="row a-auto" style="margin-top: 1rem;">
+								<table class="simple bordered">
+									<thead>
+										<tr>
+											<th>Country</th>
+											<th>Population</th>
+											<th>Avaaz</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Andorra</td>
+											<td>85,000</td>
+											<td>3,316</td>
+										</tr>
+										<tr>
+											<td>Luxembourg</td>
+											<td>498,000</td>
+											<td>14,228</td>
+										</tr>
+										<tr>
+											<td>France</td>
+											<td>64,768,000</td>
+											<td>1,827,517</td>
+										</tr>
+										<tr>
+											<td>Belgium</td>
+											<td>10,423,000</td>
+											<td>292,530</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3"></td>
+										</tr>
+									</tfoot>
+								</table>
+								<pre class="code">
+									<div class="title">Simple bordered table</div>
+<code>
+&lt;table class="simple bordered">
+  &lt;thead>
+    &lt;tr>
+      &lt;th>Country&lt;/th>
+      &lt;th>Population&lt;/th>
+      &lt;th>Avaaz&lt;/th>
+    &lt;/tr>
+  &lt;/thead>
+  &lt;tbody>
+    &lt;!-- tr and td tags-->
+  &lt;/tbody>
+  &lt;tfoot>
+    &lt;tr>
+      &lt;td colspan="3">&lt;/td>
+    &lt;/tr>
+  &lt;/tfoot>
+&lt;/table>
+</code>
+								</pre>
+							</div>
+							<div class="row a-auto" style="margin-top: 1rem;">
+								<table class="highlight bordered">
+									<thead>
+										<tr>
+											<th>Country</th>
+											<th>Population</th>
+											<th>Avaaz</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Andorra</td>
+											<td>85,000</td>
+											<td>3,316</td>
+										</tr>
+										<tr class="highlighted">
+											<td>Luxembourg</td>
+											<td>498,000</td>
+											<td>14,228</td>
+										</tr>
+										<tr>
+											<td>France</td>
+											<td>64,768,000</td>
+											<td>1,827,517</td>
+										</tr>
+										<tr>
+											<td>Belgium</td>
+											<td>10,423,000</td>
+											<td>292,530</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="3"></td>
+										</tr>
+									</tfoot>
+								</table>
+								<pre class="code">
+									<div class="title">Table with highlight</div>
+<code>
+&lt;table class="highlight bordered">
+  &lt;thead>
+    &lt;tr>
+      &lt;th>Country&lt;/th>
+      &lt;th>Population&lt;/th>
+      &lt;th>Avaaz&lt;/th>
+    &lt;/tr>
+  &lt;/thead>
+  &lt;tbody>
+    &lt;!-- tr and td tags-->
+  &lt;/tbody>
+  &lt;tfoot>
+    &lt;tr>
+      &lt;td colspan="3">&lt;/td>
+    &lt;/tr>
+  &lt;/tfoot>
+&lt;/table>
+</code>
+								</pre>
+							</div>
+						</div>
+					</div>
+					<div class="pannel">
+						<div class="pannel-header inverse">
+							<div class="col a-s">Images with filters</div>
+						</div>
+						<div class="pannel-body">
+							<div class="row a-c">
+								<div class="col">
+									<div class="pannel">
+										<img src="https://robohash.org/sample1.png">
+									</div>
+								</div>
+								<div class="col">
+									<div class="pannel">
+										<img src="https://robohash.org/sample2.png">
+									</div>
+								</div>
+								<div class="col">
+									<div class="pannel">
+										<img src="https://robohash.org/sample3.png">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pannel">
+						<div class="pannel-header inverse">
+							<div class="col a-s">Use retro forms</div>
+						</div>
+						<div class="pannel-body">
+							<form>
+								<div class="form-group">
+									<label class="checkbox"
+										>One
+										<input type="checkbox" checked />
+										<span class="checkmark">
+											<span></span>
+										</span>
+									</label>
+									<label class="checkbox"
+										>Two
+										<input type="checkbox" checked />
+										<span class="checkmark">
+											<span></span>
+										</span>
+									</label>
+									<progress value="56" max="100"></progress>
+								</div>
+								<div class="form-group inverse">
+									<label class="field">
+										<input placeholder="Placeholder" type="text" />
+									</label>
+								</div>
+								<div class="form-group">
+									<div class="select">
+										<select name="select">
+											<option selected value="value1">Value 1</option>
+											<option value="value2" selected>Value 2</option>
+											<option value="value3">Value 3</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<textarea placeholder="Placeholder...">
+Some intro text</textarea
+									>
+								</div>
+								<div class="form-group">
+									<div class="btn">Normal</div>
+									<div class="btn active">Active</div>
+									<div class="btn b-alt">Dashed</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="post">
+						<a 
+							class="btn" 
+							style="margin: auto; display: block; text-decoration: none; display: flex; justify-content: center; align-items: center;"
+							href="https://github.com/pabletos/terminalize/releases"
+							target="_blank"
+						>
+							<img 
+								style="width: 2rem"
+								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png?20180806170715">
+							<span style="flex: 1;">Download from Github</span>
+						</a>
+					</div>
+				</div>
+				<div class="pannel-footer inverse">
+					<div class="col a-e">Terminalize v0.1</div>
+				</div>
+			</div>
+		</div>
