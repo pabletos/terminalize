@@ -34,6 +34,7 @@
 				}
 			}
 		</style>
+		<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
 		<script type="text/javascript">		
 			window.addEventListener('input', function (event) {
 				const terminalize = document.getElementsByClassName('terminalize')[0];
@@ -479,4 +480,12 @@ Some intro text</textarea
 					<div class="col a-e">Terminalize v0.1</div>
 				</div>
 			</div>
+			<script>
+				kofiWidgetOverlay.draw('phuet', {
+				  'type': 'floating-chat',
+				  'floating-chat.donateButton.text': '',
+				  'floating-chat.donateButton.background-color': '#00c800',
+				  'floating-chat.donateButton.text-color': '#000000'
+				});
+			  </script>
 		</div>
