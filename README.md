@@ -2,7 +2,15 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/pabletos/terminalize/main/img/terminalize.svg" alt="Terminalize logo" width="250">
 </p>
-
+<p>
+<a 
+  href='https://ko-fi.com/B0B1PYK0W'
+  target='_blank'
+  rel="noreferrer"
+>
+  <img height='36' style={{border:'0px', height:'36px'}} src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+</a>
+</p>
 Terminalize is **a simple and lightweight CSS3 micro-framework** for doing terminal-like interfaces. [You can check a live version with examples here.](https://terminalize.pablohuet.com/)
 
 ## Motivation
