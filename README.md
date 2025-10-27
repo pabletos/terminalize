@@ -27,11 +27,53 @@ Some time ago I re-discovered this project buried in my files and decided to tra
 ## Features
 
 * Default and alternate styles for most HTML tags
-* Fully styled forms and form inputs including buttons and selects.
-* Responsive design using `.pannel`, `.row` and `.col` classes
+* Fully styled forms and form inputs including buttons and selects
+* **NEW**: Customizable Select Elements (2025) - Modern styling with full control over dropdown appearance
+* Responsive design using `.panel`, `.row` and `.col` classes
 * Unique styled code blocks
 * Optional animations, filters and much more to obtain a retro terminal style
 
 ## How To use it
 
 I designed **Terminalize** to be used with any other framework or existing style, so you only need to put a class `.terminalize` in the parent to have all the children correctly styled. Then inside you have to use a first `div` element with a `.screen` class to correctly apply the theme background color.
+
+## Select Elements
+
+Terminalize supports both traditional and modern customizable select elements:
+
+### Traditional Select (All Browsers)
+```html
+<div class="select">
+    <select>
+        <option value="">Choose option...</option>
+        <option value="value1">Option 1</option>
+        <option value="value2">Option 2</option>
+    </select>
+</div>
+```
+
+### Customizable Select (Chrome 130+, Edge 130+)
+```html
+<select class="customizable">
+    <button>
+        <selectedcontent></selectedcontent>
+    </button>
+    <option value="">Choose option...</option>
+    <option value="value1">Option 1</option>
+    <option value="value2">Option 2</option>
+</select>
+```
+
+#### Customizable Select Classes:
+- `.customizable` - Base class for new select styling
+- `.compact` - Smaller padding and font size
+- `.thick-border` - 2px border width
+- `.rounded` - Rounded corners (optional for softer look)
+
+#### Browser Support:
+- ✅ Chrome 130+
+- ✅ Edge 130+ 
+- 🚧 Firefox (in development)
+- 🚧 Safari (in development)
+
+**Note**: Customizable selects provide progressive enhancement - they fall back gracefully to traditional styling in unsupported browsers while maintaining full functionality.

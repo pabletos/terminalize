@@ -10,11 +10,11 @@
 		/>
 		<meta property="og:title" content="Terminalize: A CSS terminal micro-framework" />
 		<meta property="og:description" content="Terminalize is a simple and lightweight CSS3 micro-framework for doing terminal-like interfaces" />
-		<meta property="og:image" content="https://terminalize.ml/terminalize.png" />
-		<meta property="og:url" content="http://terminalize.ml" />
+		<meta property="og:image" content="https://terminalize.pablohuet.com/terminalize.jpg" />
+		<meta property="og:url" content="http://terminalize.pablohuet.com" />
 		<meta property="og:type" content="website" />
 		<meta name="twitter:creator" content="@Pabletos"/>
-		<meta name="twitter:image" content="https://terminalize.ml/terminalize.png">
+		<meta name="twitter:image" content="https://terminalize.pablohuet.com/terminalize.jpg">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="favicon.svg" />	
 		<link
@@ -23,14 +23,42 @@
 			type="text/css"
 			media="all"
 		/>
-		<link rel="canonical" href="http://terminalize.ml" />
+		<link rel="canonical" href="http://terminalize.pablohuet.com" />
 		<style>
-			@media only screen and (max-width: 600px) {
+			h2 {
+				font-size: 1.1rem;
+				margin: 0;
+			}
+			h1 {
+				font-size: 3rem;
+				margin: 1.5rem 0;
+			}
+			.panel.w-100.p-1 h3 {
+				margin-top: 0rem;
+			}
+			.panel.w-100.p-1 label {
+				margin-bottom: .5rem;
+			}
+			#select-theme {
+				min-width: 12rem;
+				border-top: 0;
+				border-bottom: 0;
+				border-right: 0;
+				border-radius: 0;
+			}
+			@media only screen and (max-width: 768px) {
 				#title {
 					display: none;
 				}
 				.btn {
 					margin: 0.5rem 0;
+				}
+				h2 {
+					font-size: 1rem;
+				}
+				h1 {
+					font-size: 2rem;
+					margin: 1rem 0;
 				}
 			}
 		</style>
@@ -63,13 +91,13 @@
 		style="padding: 0rem; margin: 0rem; background: black"
 	>
 		<div class="screen scanlines">
-			<div class="pannel m-0">
-				<div class="pannel-header">
+			<div class="panel m-0 mw-fhd">
+				<div class="panel-header">
 					<div class="col a-s">
 						<div class="row j-b a-auto w-100">
 							<div id="title" class="type">This is Terminalize<span class="cursor blink"></span></div>
 							<div style="margin-right: -1rem;" class="select no-border">
-								<select id="select-theme" name="theme">
+								<select id="select-theme" name="theme" class="customizable compact">
 									<option selected value="null">Original theme</option>
 									<option value="theme-blue">Blue theme</option>
 									<option value="theme-orange">Orange theme</option>
@@ -83,25 +111,38 @@
 						<div class="control">X</div>
 					</div>
 				</div>
-				<div class="pannel-body p-3">
-					<div class="post">
-						<a 
-							class="btn" 
-							style="margin: auto; display: block; text-decoration: none; display: flex; justify-content: center; align-items: center;"
-							href="https://github.com/pabletos/terminalize/releases"
-							target="_blank"
-						>
-							<img 
-								style="width: 2rem; filter: brightness(6.5) sepia(100%) hue-rotate(90deg);"
-								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png?20180806170715">
-							<span style="flex: 1;">Download from Github</span>
-						</a>
-					</div>
-					<div class="pannel fluid b-sd">
-						<div class="pannel-header inverse">
-							<div class="col a-s">What is it?</div>
+				<div class="panel-body p-3">
+					<div class="panel fluid b-sd b-none">
+						<div class="post t-c">
+							<svg style="color: var(--color-primary); max-width: 8rem; margin: auto; display: block" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.88 39.88">
+								<defs><style>.cls-1,.cls-2,.cls-3{stroke:currentColor;stroke-miterlimit:10;}.cls-2{fill:#fff;}.cls-3{fill:currentColor;}</style></defs>
+								<rect fill="transparent" class="cls-1" x="0.5" y="0.5" width="38.88" height="38.88"/>
+								<line class="cls-2" x1="0.5" y1="5.93" x2="39.38" y2="5.93"/>
+								<line class="cls-2" x1="31.87" y1="0.06" x2="31.87" y2="5.93"/>
+								<line class="cls-3" x1="34.4" y1="4.48" x2="37.33" y2="1.91"/>
+								<line class="cls-3" x1="34.4" y1="1.91" x2="37.33" y2="4.48"/>
+								<path class="cls-3" d="M17.93,12.11H14.1a3.06,3.06,0,0,0-1.9.39c-.28.26-.42,1.05-.43,2.37l0,.42H9.4V10.63h22v4.66H29v-.42c0-1.32-.16-2.11-.44-2.37a3,3,0,0,0-1.9-.39H22.84V28.63a6.94,6.94,0,0,0,.37,2.55,5.05,5.05,0,0,0,2.29.42h.28V33H15V31.61h.29c1.29-.08,2.06-.25,2.29-.52a4.67,4.67,0,0,0,.36-2.43Z"/>
+							</svg>
+							<h1>Terminalize</h1>
+							<h2>CSS micro-framework for terminal style UIs</h2>
+							<a 
+								class="btn" 
+								style="margin: 2rem auto; display: block; text-decoration: none; display: flex; justify-content: center; align-items: center; max-width: max-content; gap: 1.5rem;"
+								href="https://github.com/pabletos/terminalize/releases"
+								target="_blank"
+							>
+								<img 
+									style="width: 2rem; filter: brightness(6.5) sepia(100%) hue-rotate(90deg);"
+									src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png?20180806170715">
+								<span style="flex: 1;">Download from Github</span>
+							</a>
 						</div>
-						<div class="pannel-body">
+					</div>
+					<div class="panel fluid b-sd">
+						<div class="panel-header inverse">
+							<h2 class="col a-s">What is it?</h2>
+						</div>
+						<div class="panel-body">
 							<div class="post">
 								<p>
 									Terminalize is a simple CSS3 micro-framework for doing
@@ -140,11 +181,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="pannel b-sd">
-						<div class="pannel-header inverse">
-							<div class="col a-s">Customize</div>
+					<div class="panel b-sd">
+						<div class="panel-header inverse">
+							<h2 class="col a-s">Customize</h2>
 						</div>
-						<div class="pannel-body">
+						<div class="panel-body">
 							<div class="row">
 								<div class="col">
 									<p>
@@ -174,11 +215,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="pannel b-sd">
-						<div class="pannel-header inverse">
-							<div class="col a-s">Code blocks</div>
+					<div class="panel b-sd">
+						<div class="panel-header inverse">
+							<h2 class="col a-s">Code blocks</h2>
 						</div>
-						<div class="pannel-body">
+						<div class="panel-body">
 							<pre class="code">
 							<div class="title" contenteditable="true">This text is editable! Try me!</div>
                 <code contenteditable="true">
@@ -201,11 +242,11 @@ function two(){
               </pre>
 						</div>
 					</div>
-					<div class="pannel fluid b-sd">
-						<div class="pannel-header inverse">
-							<div class="col a-s">Display your data</div>
+					<div class="panel fluid b-sd">
+						<div class="panel-header inverse">
+							<h2 class="col a-s">Display your data</h2>
 						</div>
-						<div class="pannel-body">
+						<div class="panel-body">
 							<div class="row a-auto">
 								<div class="table-wrapper col">
 									<table>
@@ -394,35 +435,35 @@ function two(){
 							</div>
 						</div>
 					</div>
-					<div class="pannel b-sd">
-						<div class="pannel-header inverse">
-							<div class="col a-s">Images with filters</div>
+					<div class="panel b-sd">
+						<div class="panel-header inverse">
+							<h2 class="col a-s">Images with filters</h2>
 						</div>
-						<div class="pannel-body">
+						<div class="panel-body">
 							<div class="row a-c">
 								<div class="col">
-									<div class="pannel">
+									<div class="panel">
 										<img src="https://robohash.org/sample1.png">
 									</div>
 								</div>
 								<div class="col">
-									<div class="pannel">
+									<div class="panel">
 										<img src="https://robohash.org/sample2.png">
 									</div>
 								</div>
 								<div class="col">
-									<div class="pannel">
+									<div class="panel">
 										<img src="https://robohash.org/sample3.png">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="pannel b-sd">
-						<div class="pannel-header inverse">
-							<div class="col a-s">Use retro forms</div>
+					<div class="panel b-sd">
+						<div class="panel-header inverse">
+							<h2 class="col a-s">Use retro forms</h2>
 						</div>
-						<div class="pannel-body">
+						<div class="panel-body">
 							<form>
 								<div class="form-group">
 									<label class="checkbox"
@@ -468,6 +509,90 @@ Some intro text</textarea
 							</form>
 						</div>
 					</div>
+					<div class="panel b-sd">
+						<div class="panel-header inverse">
+							<h2 class="col a-s">New Customizable Selects (Chrome/Edge 130+)</h2>
+						</div>
+						<div class="grid panel-body p-2">
+							<div class="panel w-100 p-1 b-alt">
+								<h3>Basic Customizable</h3>
+								<label for="custom-basic">Programming Language:</label>
+								<select id="custom-basic" class="customizable">
+									<button>
+										<selectedcontent></selectedcontent>
+									</button>
+									<option value="">Choose language...</option>
+									<option value="javascript">JavaScript</option>
+									<option value="python">Python</option>
+									<option value="rust">Rust</option>
+									<option value="go">Go</option>
+									<option value="cpp">C++</option>
+								</select>
+							</div>
+							
+							<div class="panel w-100 p-1 b-alt">
+								<h3>Compact Style</h3>
+								<label for="custom-compact">Terminal Theme:</label>
+								<select id="custom-compact" class="customizable compact">
+									<button>
+										<selectedcontent></selectedcontent>
+									</button>
+									<option value="">Select theme...</option>
+									<option value="green">Classic Green</option>
+									<option value="blue">Cyber Blue</option>
+									<option value="orange">Amber</option>
+									<option value="white">Monochrome</option>
+								</select>
+							</div>
+							
+							<div class="panel w-100 p-1 b-alt">
+								<h3>Thick Border Style</h3>
+								<label for="custom-thick">System Status:</label>
+								<select id="custom-thick" class="customizable thick-border">
+									<button>
+										<selectedcontent></selectedcontent>
+									</button>
+									<option value="">Status...</option>
+									<option value="online">🟢 ONLINE</option>
+									<option value="busy">🟡 BUSY</option>
+									<option value="away">🔵 AWAY</option>
+									<option value="offline">🔴 OFFLINE</option>
+								</select>
+							</div>
+							
+							<div class="panel w-100 p-1 b-alt">
+								<h3>With Complex Content</h3>
+								<label for="custom-complex">Server Node:</label>
+								<select id="custom-complex" class="customizable">
+									<button>
+										<selectedcontent></selectedcontent>
+									</button>
+									<option value="">Select node...</option>
+									<option value="node1">
+										<span class="node-icon">🖥️</span>
+										<span class="node-info">
+											<strong>NODE-01</strong><br>
+											<small>192.168.1.100</small>
+										</span>
+									</option>
+									<option value="node2">
+										<span class="node-icon">🖥️</span>
+										<span class="node-info">
+											<strong>NODE-02</strong><br>
+											<small>192.168.1.101</small>
+										</span>
+									</option>
+									<option value="node3">
+										<span class="node-icon">🖥️</span>
+										<span class="node-info">
+											<strong>NODE-03</strong><br>
+											<small>192.168.1.102</small>
+										</span>
+									</option>
+								</select>
+							</div>
+						</div>
+					</div>
 					<div class="post">
 						<a 
 							class="btn" 
@@ -482,8 +607,8 @@ Some intro text</textarea
 						</a>
 					</div>
 				</div>
-				<div class="pannel-footer inverse">
-					<div class="col a-e">Terminalize v0.1</div>
+				<div class="panel-footer inverse">
+					<div class="col a-e">Terminalize v1.0</div>
 				</div>
 			</div>
 			<script>

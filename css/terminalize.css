@@ -224,7 +224,7 @@
 	animation: blink-caret .75s step-end infinite;
 }
 
-.terminalize .pannel {
+.terminalize .panel {
 	display: flex;
 	position: relative;
 	overflow: hidden;
@@ -238,11 +238,11 @@
 	
 }
 
-.terminalize .pannel.fluid {
+.terminalize .panel.fluid {
 	max-height: none;
 }
 
-.terminalize .pannel .pannel-header {
+.terminalize .panel .panel-header {
 	overflow: hidden;
 	display: flex;
 	flex-direction: row;
@@ -254,11 +254,11 @@
 	min-height: 2rem;
 }
 
-.terminalize .pannel .pannel-header > * {
+.terminalize .panel .panel-header > * {
 	padding: 0.5rem 1rem;
 }
 
-.terminalize .pannel .pannel-header .controls {
+.terminalize .panel .panel-header .controls {
 	padding: 0;
 	flex: 0;
 	display: flex;
@@ -266,25 +266,27 @@
 	border-left: 1px var(--border-style) var(--color-primary);
 }
 
-.terminalize .pannel .pannel-header .controls .control {
+.terminalize .panel .panel-header .controls .control {
 	padding: 0.5rem;
 	padding: 0.5rem;
 	min-width: 1.5rem;
 	text-align: center;
+	display: flex;
+    align-items: center;
 }
 
-.terminalize .pannel .pannel-header .controls .control:hover {
+.terminalize .panel .panel-header .controls .control:hover {
 	cursor: pointer;
 	background-color: var(--color-primary);
 	color: var(--color-secondary);
 }
 
-.terminalize .pannel .pannel-body {
+.terminalize .panel .panel-body {
 	overflow-y: auto;
 	padding: 1rem;
 }
 
-.terminalize .pannel .pannel-footer {
+.terminalize .panel .panel-footer {
 	overflow: hidden;
 	display: flex;
 	flex-direction: row;
@@ -295,7 +297,7 @@
 	min-height: 2rem;
 }
 
-.terminalize .pannel .pannel-footer > * {
+.terminalize .panel .panel-footer > * {
 	padding: 0.5rem 1rem;
 }
 
@@ -587,6 +589,10 @@
 	border-style: var(--border-style-secondary) !important;
 }
 
+.terminalize .b-none {
+	border: none !important;
+}
+
 .terminalize progress {
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -655,22 +661,6 @@
 .terminalize .select.no-border {
 	border: 0;
 }
-
-.terminalize .select::after{
-	content:"\025be";
-	font-size: 2rem;
-	color: var(--color-secondary);
-	display:table-cell;
-	text-align:center;
-	width:30px;
-	height:36px;
-	background-color:var(--color-primary);
-	position:absolute;
-	top:-6px;
-	right:0px;	
-	pointer-events: none;
-}
-
 .terminalize select {
 	width: 100%;
 	text-shadow: var(--color-primary) 0 -0.1rem 2rem;
@@ -686,6 +676,173 @@
 }
 
 .terminalize select:focus{ outline: none;}
+
+/* CUSTOMIZABLE SELECT STYLES (2025 Feature) */
+/* Opt into the new customizable select rendering */
+.terminalize select.customizable,
+.terminalize select.customizable::picker(select) {
+	appearance: base-select;
+}
+
+/* Style the select button */
+.terminalize select.customizable {
+	border-radius: 0;
+	border: 1px var(--border-style) var(--color-primary);
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+	font-family: var(--font);
+	font-size: 1rem;
+	padding: 0.8rem 1rem;
+	min-height: 2.5rem;
+	position: relative;
+	text-shadow: var(--color-primary) 0 -0.1rem 2rem;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.terminalize select.customizable:hover,
+.terminalize select.customizable:focus {
+	background-color: var(--color-quaternary);
+	outline: none;
+}
+
+/* Style the picker icon (dropdown arrow) */
+.terminalize select.customizable::picker-icon {
+	color: var(--color-primary);
+	font-size: 1.2rem;
+	transition: 0.3s transform ease;
+	content: "▼";
+	position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.terminalize select.customizable:open::picker-icon {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.terminalize select.customizable::picker(select) {
+	border: 1px var(--border-style) var(--color-primary);
+	border-radius: 0;
+	background-color: var(--color-secondary);
+	padding: 0;
+	margin-top: 2px;
+	box-shadow: 
+		2px 2px 0px var(--color-tertiary),
+		4px 4px 0px var(--color-quaternary);
+	opacity: 0;
+	transition: all 0.3s ease allow-discrete;
+}
+
+.terminalize select.customizable::picker(select):popover-open {
+	opacity: 1;
+}
+
+@starting-style {
+	.terminalize select.customizable::picker(select):popover-open {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+}
+
+.terminalize select.customizable option {
+	display: flex;
+	align-items: center;
+	padding: 0.8rem 1rem;
+	border: none;
+	border-bottom: 1px var(--border-style-secondary) var(--color-tertiary);
+	background-color: var(--color-secondary);
+	color: var(--color-primary);
+	font-family: var(--font);
+	font-size: 1rem;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	text-shadow: var(--color-primary) 0 -0.1rem 2rem;
+}
+
+.terminalize select.customizable option:last-of-type {
+	border-bottom: none;
+}
+
+.terminalize select.customizable option:hover,
+.terminalize select.customizable option:focus {
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
+	font-weight: bold;
+	text-shadow: none;
+}
+
+.terminalize select.customizable option:checked {
+	background-color: var(--color-primary);
+	font-weight: bold;
+}
+
+.terminalize select.customizable option::checkmark {
+	content: "■";
+	color: var(--color-primary);
+	font-size: 0.8rem;
+}
+
+.terminalize select.customizable option:checked::checkmark {
+	color: var(--color-secondary);
+}
+
+.terminalize select.customizable option:hover::checkmark {
+	color: var(--color-secondary);
+}
+
+.terminalize select.customizable selectedcontent {
+	display: flex;
+	align-items: center;
+	font-family: var(--font);
+	color: var(--color-primary);
+	text-shadow: var(--color-primary) 0 -0.1rem 2rem;
+}
+
+.terminalize select.customizable.compact {
+	padding: 0.5rem 0.8rem;
+	min-height: 2rem;
+	font-size: 0.9rem;
+}
+
+.terminalize select.customizable.compact option {
+	padding: 0.5rem 0.8rem;
+	font-size: 0.9rem;
+}
+
+.terminalize select.customizable.thick-border {
+	border-width: 2px;
+}
+
+.terminalize select.customizable.thick-border::picker(select) {
+	border-width: 2px;
+}
+
+.terminalize select.customizable.rounded {
+	border-radius: 4px;
+}
+
+.terminalize select.customizable.rounded::picker(select) {
+	border-radius: 4px;
+}
+
+.terminalize.theme-blue select.customizable::picker-icon,
+.terminalize.theme-orange select.customizable::picker-icon {
+	color: var(--color-primary);
+}
+
+/* END CUSTOMIZABLE SELECT STYLES*/
+
+.terminalize .grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1rem;
+}
+
+.grid > .panel {
+	margin: 0;
+}
 
 @keyframes blink-caret {
 	from, to { border-color: transparent }
@@ -844,7 +1001,7 @@
 		margin: 0;
 	}
 
-	.terminalize .pannel .pannel-body {
+	.terminalize .panel .panel-body {
 		padding: 0.4rem;
 	}
 
