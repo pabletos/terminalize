@@ -19,7 +19,7 @@
 		<link rel="icon" href="favicon.svg" />	
 		<link
 			rel="stylesheet"
-			href="css/terminalize.min.css"
+			href="css/terminalize.css"
 			type="text/css"
 			media="all"
 		/>
@@ -63,11 +63,11 @@
 		style="padding: 0rem; margin: 0rem; background: black"
 	>
 		<div class="screen scanlines">
-			<div class="pannel rounded">
+			<div class="pannel m-0">
 				<div class="pannel-header">
 					<div class="col a-s">
 						<div class="row j-b a-auto w-100">
-							<div id="title""" class="type">This is Terminalize<span class="cursor blink"></span></div>
+							<div id="title" class="type">This is Terminalize<span class="cursor blink"></span></div>
 							<div style="margin-right: -1rem;" class="select no-border">
 								<select id="select-theme" name="theme">
 									<option selected value="null">Original theme</option>
@@ -83,7 +83,7 @@
 						<div class="control">X</div>
 					</div>
 				</div>
-				<div class="pannel-body">
+				<div class="pannel-body p-3">
 					<div class="post">
 						<a 
 							class="btn" 
@@ -92,12 +92,12 @@
 							target="_blank"
 						>
 							<img 
-								style="width: 2rem"
+								style="width: 2rem; filter: brightness(6.5) sepia(100%) hue-rotate(90deg);"
 								src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/900px-Octicons-mark-github.svg.png?20180806170715">
 							<span style="flex: 1;">Download from Github</span>
 						</a>
 					</div>
-					<div class="pannel fluid">
+					<div class="pannel fluid b-sd">
 						<div class="pannel-header inverse">
 							<div class="col a-s">What is it?</div>
 						</div>
@@ -140,7 +140,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="pannel">
+					<div class="pannel b-sd">
 						<div class="pannel-header inverse">
 							<div class="col a-s">Customize</div>
 						</div>
@@ -174,7 +174,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="pannel">
+					<div class="pannel b-sd">
 						<div class="pannel-header inverse">
 							<div class="col a-s">Code blocks</div>
 						</div>
@@ -201,49 +201,51 @@ function two(){
               </pre>
 						</div>
 					</div>
-					<div class="pannel fluid">
+					<div class="pannel fluid b-sd">
 						<div class="pannel-header inverse">
 							<div class="col a-s">Display your data</div>
 						</div>
 						<div class="pannel-body">
 							<div class="row a-auto">
-								<table>
-									<thead>
-										<tr>
-											<th>Country</th>
-											<th>Population</th>
-											<th>Avaaz</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Andorra</td>
-											<td>85,000</td>
-											<td>3,316</td>
-										</tr>
-										<tr>
-											<td>Luxembourg</td>
-											<td>498,000</td>
-											<td>14,228</td>
-										</tr>
-										<tr>
-											<td>France</td>
-											<td>64,768,000</td>
-											<td>1,827,517</td>
-										</tr>
-										<tr>
-											<td>Belgium</td>
-											<td>10,423,000</td>
-											<td>292,530</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="3"></td>
-										</tr>
-									</tfoot>
-								</table>
-								<pre class="code">
+								<div class="table-wrapper col">
+									<table>
+										<thead>
+											<tr>
+												<th>Country</th>
+												<th>Population</th>
+												<th>Avaaz</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Andorra</td>
+												<td>85,000</td>
+												<td>3,316</td>
+											</tr>
+											<tr>
+												<td>Luxembourg</td>
+												<td>498,000</td>
+												<td>14,228</td>
+											</tr>
+											<tr>
+												<td>France</td>
+												<td>64,768,000</td>
+												<td>1,827,517</td>
+											</tr>
+											<tr>
+												<td>Belgium</td>
+												<td>10,423,000</td>
+												<td>292,530</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="3"></td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<pre class="code col">
 									<div class="title">Default table</div>
 <code>
 &lt;table>
@@ -267,43 +269,45 @@ function two(){
 								</pre>
 							</div>
 							<div class="row a-auto" style="margin-top: 1rem;">
-								<table class="simple bordered">
-									<thead>
-										<tr>
-											<th>Country</th>
-											<th>Population</th>
-											<th>Avaaz</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Andorra</td>
-											<td>85,000</td>
-											<td>3,316</td>
-										</tr>
-										<tr>
-											<td>Luxembourg</td>
-											<td>498,000</td>
-											<td>14,228</td>
-										</tr>
-										<tr>
-											<td>France</td>
-											<td>64,768,000</td>
-											<td>1,827,517</td>
-										</tr>
-										<tr>
-											<td>Belgium</td>
-											<td>10,423,000</td>
-											<td>292,530</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="3"></td>
-										</tr>
-									</tfoot>
-								</table>
-								<pre class="code">
+								<div class="table-wrapper col">
+									<table class="simple bordered">
+										<thead>
+											<tr>
+												<th>Country</th>
+												<th>Population</th>
+												<th>Avaaz</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Andorra</td>
+												<td>85,000</td>
+												<td>3,316</td>
+											</tr>
+											<tr>
+												<td>Luxembourg</td>
+												<td>498,000</td>
+												<td>14,228</td>
+											</tr>
+											<tr>
+												<td>France</td>
+												<td>64,768,000</td>
+												<td>1,827,517</td>
+											</tr>
+											<tr>
+												<td>Belgium</td>
+												<td>10,423,000</td>
+												<td>292,530</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="3"></td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<pre class="code col">
 									<div class="title">Simple bordered table</div>
 <code>
 &lt;table class="simple bordered">
@@ -327,43 +331,45 @@ function two(){
 								</pre>
 							</div>
 							<div class="row a-auto" style="margin-top: 1rem;">
-								<table class="highlight bordered">
-									<thead>
-										<tr>
-											<th>Country</th>
-											<th>Population</th>
-											<th>Avaaz</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Andorra</td>
-											<td>85,000</td>
-											<td>3,316</td>
-										</tr>
-										<tr class="highlighted">
-											<td>Luxembourg</td>
-											<td>498,000</td>
-											<td>14,228</td>
-										</tr>
-										<tr>
-											<td>France</td>
-											<td>64,768,000</td>
-											<td>1,827,517</td>
-										</tr>
-										<tr>
-											<td>Belgium</td>
-											<td>10,423,000</td>
-											<td>292,530</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="3"></td>
-										</tr>
-									</tfoot>
-								</table>
-								<pre class="code">
+								<div class="table-wrapper col">
+									<table class="highlight bordered">
+										<thead>
+											<tr>
+												<th>Country</th>
+												<th>Population</th>
+												<th>Avaaz</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Andorra</td>
+												<td>85,000</td>
+												<td>3,316</td>
+											</tr>
+											<tr class="highlighted">
+												<td>Luxembourg</td>
+												<td>498,000</td>
+												<td>14,228</td>
+											</tr>
+											<tr>
+												<td>France</td>
+												<td>64,768,000</td>
+												<td>1,827,517</td>
+											</tr>
+											<tr>
+												<td>Belgium</td>
+												<td>10,423,000</td>
+												<td>292,530</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="3"></td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+								<pre class="code col">
 									<div class="title">Table with highlight</div>
 <code>
 &lt;table class="highlight bordered">
@@ -388,7 +394,7 @@ function two(){
 							</div>
 						</div>
 					</div>
-					<div class="pannel">
+					<div class="pannel b-sd">
 						<div class="pannel-header inverse">
 							<div class="col a-s">Images with filters</div>
 						</div>
@@ -412,7 +418,7 @@ function two(){
 							</div>
 						</div>
 					</div>
-					<div class="pannel">
+					<div class="pannel b-sd">
 						<div class="pannel-header inverse">
 							<div class="col a-s">Use retro forms</div>
 						</div>

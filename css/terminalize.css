@@ -13,6 +13,10 @@
 	--font: 'Terminal', monospace;
 	--post-width: 38rem;
 	--filter: sepia(100%) hue-rotate(90deg);
+	--width-sd: 640px;
+	--width-hd: 1280px;
+	--width-fhd: 1920px;
+	--width-uhd: 3840px;
 	
 	font-family: var(--font);
 	font-size: 1rem;
@@ -36,18 +40,6 @@
 
 .terminalize p {
 	text-align: justify;
-}
-
-.t-l {
-	text-align: left !important;
-}
-
-.t-r {
-	text-align: right !important;
-}
-
-.t-c {
-	text-align: center !important;
 }
 
 .terminalize.theme-blue {
@@ -94,9 +86,22 @@
 	outline: 0px solid transparent;
 }
 
+.terminalize .table-wrapper {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.terminalize .table-wrapper {
+	margin: 1rem 0;
+}
+
 .terminalize table {
 	margin: 1rem;
 	border-collapse: collapse;
+}
+
+.terminalize .table-wrapper table {
+	margin: 0 auto;
 }
 
 .terminalize table.bordered {
@@ -225,7 +230,7 @@
 	overflow: hidden;
 	flex: 1;
 	max-width: 1200px;
-	max-height: calc(100% - 2rem);
+	max-height: 100%;
 	margin: 1rem auto;
 	flex-direction: column;
 	justify-content: space-between;
@@ -314,13 +319,10 @@
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 .terminalize .col {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 0 1rem;
 	flex: 1;
 	position: relative;
 	max-width: 100%;
@@ -395,6 +397,77 @@
 	width: 100%;
 }
 
+.terminalize .t-l {
+	text-align: left !important;
+}
+
+.terminalize .t-r {
+	text-align: right !important;
+}
+
+.terminalize .t-c {
+	text-align: center !important;
+}
+
+.terminalize .mw-100 {
+	max-width: 100% !important;
+}
+
+.terminalize .mw-sd {
+	max-width: var(--width-sd) !important;
+}
+
+.terminalize .mw-hd {
+	max-width: var(--width-hd) !important;
+}
+
+.terminalize .mw-fhd {
+	max-width: var(--width-fhd) !important;
+}
+
+.terminalize .mw-uhd {
+	max-width: var(--width-uhd) !important;
+}
+
+.terminalize .p-0 {
+	padding: 0rem !important;
+}
+
+.terminalize .m-0 {
+	margin: 0rem !important;
+}
+
+.terminalize .p-1 {
+	padding: 1rem !important;
+}
+
+.terminalize .m-1 {
+	margin: 1rem !important;
+}
+
+.terminalize .p-2 {
+	padding: 2rem !important;
+}
+
+.terminalize .m-2 {
+	margin: 2rem !important;
+}
+
+.terminalize .p-3 {
+	padding: 3rem !important;
+}
+
+.terminalize .m-3 {
+	margin: 3rem !important;
+}
+
+.terminalize .p-4 {
+	padding: 4rem !important;
+}
+
+.terminalize .m-4 {
+	margin: 4rem !important;
+}
 
 /* COMPONENTS */
 
@@ -702,8 +775,58 @@
 
 /* RESPONSIVE */
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1024px) {
+	.terminalize pre.code {
+		padding: 0 0 0 0.5rem;
+		max-width: 100%;
+		margin: 0;
+	}
+
+	.terminalize .p-1 {
+		padding: .5rem !important;
+	}
+
+	.terminalize .m-1 {
+		margin: .5rem !important;
+	}
+
+	.terminalize .p-2 {
+		padding: 1rem !important;
+	}
+
+	.terminalize .m-2 {
+		margin: 1rem !important;
+	}
+
+	.terminalize .p-3 {
+		padding: 1.5rem !important;
+	}
+
+	.terminalize .m-3 {
+		margin: 1.5rem !important;
+	}
+
+	.terminalize .p-4 {
+		padding: 2rem !important;
+	}
+
+	.terminalize .m-4 {
+		margin: 2rem !important;
+	}
+
+	/* For removing borders on smaller than 1024px devices */
+	.b-hd {
+		border: none !important;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+	/* For removing borders on smaller than 768px devices */
+	.b-sd {
+		border: none !important;
+	}
+
 	.terminalize blockquote {
 		margin: 0;
 	}
@@ -738,9 +861,35 @@
 		align-items: flex-start !important;
 	}
 
-}
+	.terminalize .p-1 {
+		padding: .25rem !important;
+	}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-	
+	.terminalize .m-1 {
+		margin: .25rem !important;
+	}
+
+	.terminalize .p-2 {
+		padding: .5rem !important;
+	}
+
+	.terminalize .m-2 {
+		margin: .5rem !important;
+	}
+
+	.terminalize .p-3 {
+		padding: .75rem !important;
+	}
+
+	.terminalize .m-3 {
+		margin: .75rem !important;
+	}
+
+	.terminalize .p-4 {
+		padding: 1rem !important;
+	}
+
+	.terminalize .m-4 {
+		margin: 1rem !important;
+	}
 }
