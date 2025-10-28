@@ -4,11 +4,18 @@
 </p>
 <p>
 <a 
+  href='https://github.com/pabletos/terminalize/releases/tag/1.0'
+  target='_blank'
+  rel="noreferrer"
+>
+  <img src='https://img.shields.io/badge/version-1.0-green?logo=github' border='0' alt='latest release' />
+</a>
+<a 
   href='https://ko-fi.com/B0B1PYK0W'
   target='_blank'
   rel="noreferrer"
 >
-  <img height='36' style={{border:'0px', height:'36px'}} src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+  <img height='32' style={{border:'0px', height:'36px'}} src='https://storage.ko-fi.com/cdn/kofi2.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' />
 </a>
 </p>
 
