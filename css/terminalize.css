@@ -996,7 +996,7 @@
 		position: relative;
 	}
 	.terminalize pre.code {
-		padding: 0 0 0 0.5rem;
+		padding: 1rem 0 0 0.5rem;
 		max-width: 100%;
 		margin: 0;
 	}
